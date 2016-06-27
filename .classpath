@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/imrul/NeticaJ_504/bin/64_bit/NeticaJ.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
