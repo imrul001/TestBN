@@ -30,12 +30,12 @@ public class SensitivityAnalysis {
 			Node dist_to_border = net.getNode("BOR_DIS");
 			Node strm_density = net.getNode("StreamDensity");
 			Node Malaria_w0 = net.getNode("incidents_w0");
-			Node Malaria_w1 = net.getNode("incidenets_w1");
-			Node Malaria_w2 = net.getNode("incidenets_w2");
-			Node Malaria_w3 = net.getNode("incidenets_w3");
-			Node Malaria_w4 = net.getNode("incidenets_w4");
-			Node Malaria_w5 = net.getNode("incidenets_w5");
-			Node Malaria_w6 = net.getNode("incidenets_w6");
+			Node Malaria_w1 = net.getNode("incidents_w1");
+			Node Malaria_w2 = net.getNode("incidents_w2");
+			Node Malaria_w3 = net.getNode("incidents_w3");
+			Node Malaria_w4 = net.getNode("incidents_w4");
+			Node Malaria_w5 = net.getNode("incidents_w5");
+			Node Malaria_w6 = net.getNode("incidents_w6");
 			Node mosq_pop_density_w1 = net.getNode("Mosquito_pop_density_w1");
 			Node mosq_pop_density_w2 = net.getNode("Mosquito_pop_density_w2");
 			Node mosq_pop_density_w3 = net.getNode("Mosquito_pop_density_w3");
@@ -47,22 +47,23 @@ public class SensitivityAnalysis {
 
 			ArrayList<Node> nodeList = new ArrayList<Node>();
 			// nodeList.add(rainfall_wm2);
-			// nodeList.add(slope);
+			nodeList.add(slope);
 			// nodeList.add(dist_to_border);
 			// nodeList.add(Month_w1);
 			// nodeList.add(dist_to_stream);
-			nodeList.add(strm_density);
+			// nodeList.add(strm_density);
 			// nodeList.add(LST_w1);
 			// nodeList.add(stream_effect);
 			// nodeList.add(NDVI_w1);
 			// nodeList.add(NDVI_w0);
+			// nodeList.add(LST_wm5);
 			// nodeList.add(LST_w0);
 			// nodeList.add(mosq_pop_density_w1);
 			// nodeList.add(rainfall_w0);
 			// nodeList.add(rainfall_effect_w1);
-			// nodeList.add(Malaria_w0);
+			nodeList.add(Malaria_w0);
 
-			SensitivityAnalysis.runSensitivityAnalysis(nodeList, Malaria_w1,
+			SensitivityAnalysis.runSensitivityAnalysis(nodeList, Malaria_w6,
 					net);
 			// SensitivityAnalysis.runAnalysisOnHidden(nodeList, stream_effect,
 			// net);
@@ -166,6 +167,7 @@ public class SensitivityAnalysis {
 			count++;
 		}
 		System.out.println("Total Combination Count: " + count);
+		System.out.println("Number of combinations :" + combinations.size());
 	}
 
 	public static void runAnalysisOnHidden(ArrayList nodeList,
