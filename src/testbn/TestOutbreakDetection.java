@@ -39,8 +39,8 @@ public class TestOutbreakDetection {
 			Node Malaria_w2 = net.getNode("outbreak_w2");
 			Node Malaria_w3 = net.getNode("outbreak_w3");
 			Node Malaria_w4 = net.getNode("outbreak_w4");
-			Node Malaria_w5 = net.getNode("outbreak_w5");
-			Node Malaria_w6 = net.getNode("outbreak_w6");
+			// Node Malaria_w5 = net.getNode("outbreak_w5");
+			// Node Malaria_w6 = net.getNode("outbreak_w6");
 
 			Node slope = net.getNode("Slope");
 			Node dist_to_stream = net.getNode("STRM_DIS");
@@ -94,21 +94,21 @@ public class TestOutbreakDetection {
 								Double.valueOf(dataWithNoSeparator[12]),
 								lstRange_w0);
 
-						int lst_wm1_state = getGlobalState(
-								Double.valueOf(dataWithNoSeparator[14]),
-								lstRange_w0);
+						// int lst_wm1_state = getGlobalState(
+						// 		Double.valueOf(dataWithNoSeparator[14]),
+						// 		lstRange_w0);
 
-						int lst_w0_state = getGlobalState(
-								Double.valueOf(dataWithNoSeparator[16]),
-								lstRange_w0);
+						// int lst_w0_state = getGlobalState(
+						// 		Double.valueOf(dataWithNoSeparator[16]),
+						// 		lstRange_w0);
 
 						// Malaria Actual
 						String malaria_1_actual = dataWithNoSeparator[7];
 						String malaria_2_actual = dataWithNoSeparator[9];
 						String malaria_3_actual = dataWithNoSeparator[11];
 						String malaria_4_actual = dataWithNoSeparator[13];
-						String malaria_5_actual = dataWithNoSeparator[15];
-						String malaria_6_actual = dataWithNoSeparator[17];
+						// String malaria_5_actual = dataWithNoSeparator[15];
+						// String malaria_6_actual = dataWithNoSeparator[17];
 
 						// Entering the evidence
 						dist_to_stream.finding().enterState(dist_to_strm_state);
@@ -131,11 +131,20 @@ public class TestOutbreakDetection {
 								+ Malaria_w3.getBelief("yes") + ","
 								+ malaria_3_actual + ","
 								+ Malaria_w4.getBelief("yes") + ","
-								+ malaria_4_actual + ","
-								+ Malaria_w5.getBelief("yes") + ","
-								+ malaria_5_actual + ","
-								+ Malaria_w6.getBelief("yes") + ","
-								+ malaria_6_actual);
+								+ malaria_4_actual);
+
+						// System.out.println(Malaria_w1.getBelief("yes") + ","
+						// 		+ malaria_1_actual + ","
+						// 		+ Malaria_w2.getBelief("yes") + ","
+						// 		+ malaria_2_actual + ","
+						// 		+ Malaria_w3.getBelief("yes") + ","
+						// 		+ malaria_3_actual + ","
+						// 		+ Malaria_w4.getBelief("yes") + ","
+						// 		+ malaria_4_actual + ","
+						// 		+ Malaria_w5.getBelief("yes") + ","
+						// 		+ malaria_5_actual + ","
+						// 		+ Malaria_w6.getBelief("yes") + ","
+						// 		+ malaria_6_actual);
 
 						for (Object o : net.getNodes()) {
 							Node n = (Node) o;
